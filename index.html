@@ -152,6 +152,25 @@
       width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg);
     }
 
+    
+    /* ── Intro ── */
+    #intro { background: var(--warm-white); }
+    .intro-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .intro-text p {
+      color: var(--muted); font-weight: 300; font-size: 0.95rem;
+      margin-bottom: 1rem; line-height: 1.9;
+    }
+    .intro-signature {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 1.8rem; color: var(--olive); margin-top: 1.5rem;
+    }
+    .intro-images {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+
+
     /* ── STORY ── */
     #story { background: var(--warm-white); }
     .story-layout {
@@ -360,6 +379,34 @@
     <a href="#rsvp" class="hero-btn">RSVP Here</a>
   </section>
 
+    <!-- Intro -->
+  <section id="intro">
+    <div class="section-inner">
+      <div class="intro-layout">
+        <div class="intro-text">
+          <span class="section-tag">Love in Lockdown</span>
+          <h2 class="section-heading">Our <em>Story</em></h2>
+          <div class="ornament"><div class="ornament-diamond"></div></div>
+          <p>We met online in early 2020, at the very start of the COVID pandemic. After weeks of late-night chats, we finally met in person. With restrictions still in place, our first few months together were filled with simple, meaningful moments, meals in the car, long walks around the park, and conversations that made time fly.</p>
+          <p>Since then, we've built our lives side by side. We've travelled to 16 countries, bought a home, and cherish the everyday moments as much as the adventures.</p>
+          <p>In May 2024, during a trip to South Korea, Diego proposed, and we said yes to a lifetime of love, laughter, and partnership.</p>
+          <p class="intro-signature">Diego &amp; Nicole</p>
+        </div>
+        <div class="intro-images">
+          <!-- Replace these with your actual photos -->
+          <div class="img-placeholder tall">
+            <img class="gallery" src="hugging.jpg" alt="Diego and Nicole" />
+          </div>
+          <div class="img-placeholder">
+            <img class="gallery" src="GoldenHour_283.jpg" alt="Diego and Nicole" />
+          </div>
+          <div class="img-placeholder">
+            <img class="gallery" src="N&D-51.jpg" alt="Diego and Nicole" />
+          </div>
+        </div>
+      </div>
+  </section>
+
   <!-- COUNTDOWN -->
   <div class="countdown-section">
     <p class="countdown-label">Counting down to our big day</p>
@@ -444,7 +491,7 @@
       <ul class="timeline">
         <li>
           <span class="t-time">2:00 PM</span>
-          <span class="t-event">Guests Arrive<br><small style="font-family:'Raleway',sans-serif;font-size:0.8rem;color:var(--muted);font-weight:300;">Please arrive no earlier than 2:00 pm</small></span>
+          <span class="t-event">Guests Arrive<br><small style="font-family:'Raleway',sans-serif;font-size:0.8rem;color:var(--muted);font-weight:300;">Please arrive no earlier than 2pm</small></span>
         </li>
         <li>
           <span class="t-time">2:30 PM</span>
@@ -494,6 +541,10 @@
         <div class="faq-item">
           <p class="faq-q">Arrival &amp; Parking</p>
           <p class="faq-a">Please arrive no earlier than 2:00 pm for a 2:30 pm ceremony start. The venue is best reached by car as public transport isn't available. There is plenty of free parking onsite, and staff will guide you to the ceremony area.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Gifts</p>
+          <p class="faq-a">Your presence at our wedding is a gift in itself. However, for those who would like, a wishing well will be available on the day. Your generosity is always appreciated.</p>
         </div>
       </div>
     </div>
@@ -546,23 +597,6 @@
         </div>
 
         <button class="btn-submit" type="submit">Send RSVP</button>
-
-        <!--
-          ── HOW TO RECEIVE REAL RSVPs ─────────────────────────────────────────
-          Option A — Formspree (free, easiest):
-            1. Sign up at https://formspree.io
-            2. Get your form ID (e.g. xabcdefg)
-            3. Change the opening <form> tag to:
-               <form action="https://formspree.io/f/YOUR_ID" method="POST" ...>
-            4. Remove the onsubmit="handleRSVP(event)" attribute.
-
-          Option B — Netlify Forms (free if hosting on Netlify):
-            Add the attribute  netlify  to the <form> tag. That's it.
-
-          Option C — Google Sheets via Apps Script:
-            Search: "Google Apps Script wedding RSVP form tutorial"
-          ──────────────────────────────────────────────────────────────────────
-        -->
       </form>
 
       <div class="success-msg" id="successMsg">
