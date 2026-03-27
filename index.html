@@ -110,6 +110,7 @@
       padding: 4rem 2rem;
       text-align: center;
       border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
     }
     .countdown-label {
       font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
@@ -162,9 +163,9 @@
       color: var(--muted); font-weight: 300; font-size: 0.95rem;
       margin-bottom: 1rem; line-height: 1.9;
     }
-    .intro-signature {
+    #intro-signature {
       font-family: 'Cormorant Garamond', serif; font-style: italic;
-      font-size: 1.8rem; color: var(--olive); margin-top: 1.5rem;
+      font-size: 16pt; color: var(--olive); margin-top: 1.5rem;
     }
     .intro-images {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
@@ -179,10 +180,6 @@
     .story-text p {
       color: var(--muted); font-weight: 300; font-size: 0.95rem;
       margin-bottom: 1rem; line-height: 1.9;
-    }
-    .story-signature {
-      font-family: 'Cormorant Garamond', serif; font-style: italic;
-      font-size: 1.8rem; color: var(--olive); margin-top: 1.5rem;
     }
     .story-images {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
@@ -212,9 +209,9 @@
     #venue .section-heading { color: white; }
     #venue .section-tag { color: var(--gold-light); }
     .venue-name {
-      font-family: 'Soleway', serif; font-size: clamp(2.5rem, 6vw, 5rem);
-      font-weight: 400; line-height: 1.1; letter-spacing: 0.08em;
-      color: white; margin: 2rem 0 0.5rem;
+      font-family: 'Playfair Display', serif; font-weight: 400;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: white;
+      line-height: 1.2; margin-bottom: 1rem;
     }
     .venue-addr {
       font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;
@@ -223,7 +220,7 @@
     .venue-photo {
       margin-top: 3rem; border-radius: 3px; overflow: hidden;
       background: linear-gradient(135deg, #4a5a3a 0%, #3d4d2d 100%);
-      height: 450px; display: flex; align-items: center; justify-content: center;
+      display: flex; align-items: center; justify-content: center;
     }
     .venue-photo span {
       color: rgba(255,255,255,0.4); font-family: 'Playfair Display', serif;
@@ -259,6 +256,31 @@
       color: var(--olive-dark);
     }
     .faq-a { font-size: 0.9rem; color: var(--muted); font-weight: 300; line-height: 1.85; }
+
+        /* GALLERY */
+    .gallery-heading {
+      font-family: 'Playfair Display', serif; font-weight: 400;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(white);
+      line-height: 1.2; margin-bottom: 1rem;
+    }
+    
+    .gallery-heading em { font-style: italic; color: var(--warm-white) }
+    #gallery {       
+      background: linear-gradient(135deg, #4a5a3a 0%, #3d4d2d 100%);
+      text-align: center; 
+      color: white; 
+    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+    .gallery-item { aspect-ratio: 1; border-radius: 4px; overflow: hidden; cursor: pointer; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-placeholder { background: var(--blush); display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 4px; color: white; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.9rem; }
+    .gallery-placeholder:nth-child(2) { background: var(--sage); }
+    .gallery-placeholder:nth-child(3) { background: #c4b49a; }
+    .gallery-placeholder:nth-child(4) { background: #b0a08a; }
+    .gallery-placeholder:nth-child(5) { background: var(--blush-dark); }
+    .gallery-placeholder:nth-child(6) { background: var(--sage-dark); }
+    .gallery-note { font-size: 0.85rem; color: var(--muted); margin-top: 1.5rem; font-style: italic; }
 
     /* ── GIFTS ── */
     #gifts {
@@ -384,13 +406,13 @@
     <div class="section-inner">
       <div class="intro-layout">
         <div class="intro-text">
-          <span class="section-tag">Love in Lockdown</span>
-          <h2 class="section-heading">Our <em>Story</em></h2>
+          <h2 class="section-heading">We can’t wait to celebrate the beginning of our forever with the people we <em>love</em> most.</h2>
           <div class="ornament"><div class="ornament-diamond"></div></div>
-          <p>We met online in early 2020, at the very start of the COVID pandemic. After weeks of late-night chats, we finally met in person. With restrictions still in place, our first few months together were filled with simple, meaningful moments, meals in the car, long walks around the park, and conversations that made time fly.</p>
-          <p>Since then, we've built our lives side by side. We've travelled to 16 countries, bought a home, and cherish the everyday moments as much as the adventures.</p>
-          <p>In May 2024, during a trip to South Korea, Diego proposed, and we said yes to a lifetime of love, laughter, and partnership.</p>
-          <p class="intro-signature">Diego &amp; Nicole</p>
+          <p>We are so excited to celebrate this special moment of our lives with our closest family and friends. Your love and support mean the world to us.</p>
+          <p>As we count down to our big day, we’ve created this website to share all the important details, from event information and venue details to RSVP.</p>
+          <p>Thank you for being a part of our journey. We can’t wait to celebrate with you.</p>
+          <p>See you on the big day,</p>
+          <p id="intro-signature">Diego &amp; Nicole</p>
         </div>
         <div class="intro-images">
           <!-- Replace these with your actual photos -->
@@ -441,7 +463,6 @@
           <p>We met online in early 2020, at the very start of the COVID pandemic. After weeks of late-night chats, we finally met in person. With restrictions still in place, our first few months together were filled with simple, meaningful moments, meals in the car, long walks around the park, and conversations that made time fly.</p>
           <p>Since then, we've built our lives side by side. We've travelled to 16 countries, bought a home, and cherish the everyday moments as much as the adventures.</p>
           <p>In May 2024, during a trip to South Korea, Diego proposed, and we said yes to a lifetime of love, laughter, and partnership.</p>
-          <p class="story-signature">Diego &amp; Nicole</p>
         </div>
         <div class="story-images">
           <!-- Replace these with your actual photos -->
@@ -456,14 +477,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Invitation text -->
-      <div style="text-align:center; margin-top: 5rem; border-top: 1px solid var(--border); padding-top: 4rem;">
-        <p style="font-family:'Playfair Display',serif; font-style:italic; font-size:1.15rem; color:var(--muted); max-width:600px; margin:0 auto; line-height:2; font-weight:300;">
-          We can't wait to celebrate the beginning of our forever with the people we love most.
-        </p>
-      </div>
-    </div>
   </section>
 
   <!-- VENUE -->
@@ -554,14 +567,24 @@
     </div>
   </section>
 
-  <!-- GIFTS -->
-  <section id="gifts">
+    <!-- GALLERY -->
+  <section id="gallery">
     <div class="section-inner">
-      <span class="section-tag">Gifts</span>
-      <h2 class="section-heading">Honeymoon Fund</h2>
-      <div class="ornament"><div class="ornament-diamond" style="background:rgba(255,255,255,0.4);"></div></div>
-      <p class="gifts-text">If you'd like to celebrate with us in an extra special way, we'll have a wishing well at the wedding for those who wish to contribute to our honeymoon fund. Your generosity will help us create unforgettable memories on our first adventure as a married couple.</p>
-      <p class="gifts-note">Your presence is truly the best gift we could ask for.</p>
+      <p class="section-tag">Gallery</p>
+      <h2 class="gallery-heading">Our favourite <em>moments</em></h2>
+      <div class="ornament"><div class="ornament-diamond"></div></div>
+      <div class="gallery-grid">
+        <!-- Replace these placeholders with real <img> tags when you have photos -->
+        <div class="gallery-item">
+          <img class="gallery" src="N&D-51.jpg" alt="Diego and Nicole" />
+        </div>
+        <div class="gallery-item">
+          <img class="gallery" src="N&D-51.jpg" alt="Diego and Nicole" />
+        </div>
+        <div class="gallery-item">
+          <img class="gallery" src="N&D-51.jpg" alt="Diego and Nicole" />
+        </div>
+      </div>
     </div>
   </section>
 
