@@ -156,7 +156,8 @@
     #intro { background: var(--warm-white); }
     .intro-layout {
       display: grid;
-      gap: 5rem; align-items: center;
+      gap: 2rem;
+      align-items: center;
     }
     .intro-text p {
       color: var(--muted); font-weight: 300; font-size: 0.95rem;
@@ -167,7 +168,12 @@
       font-size: 16pt; color: var(--olive); margin-top: 1.5rem;
     }
     .intro-images {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+      display: grid;
+      gap: 1rem;
+      grid-auto-flow: column;
+    }
+    .intro-gallery {
+      width: 100%;
     }
 
 
@@ -257,7 +263,7 @@
     }
     .faq-a { font-size: 0.9rem; color: var(--muted); font-weight: 300; line-height: 1.85; }
 
-        /* GALLERY */
+    /* GALLERY */
     .gallery-heading {
       font-family: 'Playfair Display', serif; font-weight: 400;
       font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(white);
@@ -412,6 +418,11 @@
           <p>Thank you for being a part of our journey. We can’t wait to celebrate with you.</p>
           <p>See you on the big day,</p>
           <p id="intro-signature">Diego &amp; Nicole</p>
+        </div>
+        <div class="intro-images">
+            <img class="intro-gallery" src="intro-1.jpg" alt="Diego and Nicole" />
+            <img class="intro-gallery" src="intro-2.jpg" alt="Diego and Nicole" />
+            <img class="intro-gallery" src="intro-3.jpg" alt="Diego and Nicole" />
         </div>
       </div>
   </section>
